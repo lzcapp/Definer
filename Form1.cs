@@ -51,6 +51,10 @@ namespace Definer {
             var freqs = new List<int>();
             foreach (var pair in pairs)
             {
+                if (pair.Word.Equals("..."))
+                {
+                    continue;
+                }
                 words.Add(pair.Word);
                 freqs.Add(Convert.ToInt32(pair.Weight * Math.Pow(10, 6)));
             }
